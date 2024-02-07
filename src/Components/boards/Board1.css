@@ -1,55 +1,72 @@
 
 .center {
   
-    align-items: center;
-    color: black;
-    text-align: center;
-  }
-  
-  .lefty {
-    align-items: left;
-    justify-content: space-between;
-    flex-direction: row;
-    align-content: left;
-    text-align: left;
-    
-    
-    display: inline-block;
-  }
-  
-  .clock {
-  
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-    left: 20%;
-    font-size: 10vh;
-  }
+  align-items: center;
+  color: black;
+  text-align: center;
+}
+
+.lefty {
+  align-items: left;
+  justify-content: space-between;
+  flex-direction: row;
+  align-content: left;
+  text-align: left;
   
   
-  .righty {
-    color: black;
-    align-items: right;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-content: right;
-    text-align: right;
-    
-    display: inline-block;
-    float: right;
-    width: 50%;
+  display: inline-block;
+}
+
+.clock {
+
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  left: 20%;
+  font-size: 10vh;
+}
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.clock span {
+  animation: blink 1s infinite;
+}
+
+.clock-digit {
+  color: #285257;
+  font-family: Termina;
+  font-size: 54px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.54px;
+}
+
+.righty {
+  color: black;
+  align-items: right;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-content: right;
+  text-align: right;
   
-  }
-  
-  .left-inside {
-  
-    text-align: left;
-    margin: auto;
-  }
-  
-  .bold {
-    font-weight: bold;
-  }
-  
+  display: inline-block;
+  float: right;
+  width: 50%;
+
+}
+
+.left-inside {
+
+  text-align: left;
+  margin: auto;
+}
+
+.bold {
+  font-weight: bold;
+}

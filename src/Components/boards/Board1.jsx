@@ -1,7 +1,6 @@
 import Clock from "../core/Clock";
 import ScrollQueue from "../core/ScrollQueue/ScrollQueue";
 
-
 import "./Board1.css";
 
 function Board1() {
@@ -13,10 +12,11 @@ function Board1() {
       <body>
         <div>
           <div className="clock">
-          <Clock></Clock>
+            <div className="clock-digit">
+              <Clock />
+            </div>
           </div>
-
-          <ScrollQueue></ScrollQueue>
+          <ScrollQueue />
         </div>
       </body>
     </div>
