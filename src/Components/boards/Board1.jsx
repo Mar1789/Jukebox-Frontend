@@ -1,6 +1,5 @@
 import Clock from "../core/Clock";
 import ScrollQueue from "../core/ScrollQueue/ScrollQueue";
-
 import "./Board1.css";
 
 function Board1() {
@@ -17,6 +16,23 @@ function Board1() {
             </div>
           </div>
           <ScrollQueue />
+          <div className="Inputs">
+        <form>
+          <label>Enter primary color:
+            <input type="text" />
+          </label>
+        </form>
+        <form>
+          <label>Enter secondary color:
+            <input type="text" />
+          </label>
+        </form>
+        <form>
+          <label>Enter digit color:
+            <input type="text" />
+          </label>
+        </form>
+      </div>
         </div>
       </body>
     </div>

@@ -1,5 +1,12 @@
 import React from "react";
-
+var button = true;
+function styleset(button){
+  if(button === false){
+    button = true;
+  } else{
+    button = false;
+  }
+}
 class Clock extends React.Component {
   constructor(props) {
     super(props);
@@ -21,34 +28,31 @@ class Clock extends React.Component {
   }
 
   render() {
-    const digitStyle = {
-      padding: "3px", 
-      borderRadius: "3px" 
-    };
-
-    const colonStyle = {
-    };
     const { date } = this.state;
     let hours = date.getHours();
     const minutes = date.getMinutes();
     const ampm = hours >= 12 ? 'PM' : 'AM';
     hours %= 12;
     hours = hours || 12;
+
     return (
-      <div className="clock" style={{ whiteSpace: "nowrap", display: "flex" }}>
-        <div style={digitStyle}>
-          {hours < 10 ? '0' + hours : hours}
-        </div>
-        <span style={colonStyle}>:</span>
-        <div style={digitStyle}>
-          {minutes < 10 ? '0' + minutes : minutes}
-        </div>
-        <div style={digitStyle}>
-          {ampm}
+      <div className="clock-container1" style={{ marginLeft: '-200px' }}> 
+        <div className="clock" style={{whiteSpace: "nowrap", display: "flex",  marginLeft: '-200px' }}>
+        <div className="digit" style={{backgroundColor: button ? "#285257" : "#ffc000", marginRight: "5px" }}>
+            {hours < 10 ? '0' + hours : hours}
+          </div>
+          <span className="colon">:</span>
+          <div className="digit" style={{ backgroundColor: "#285257", marginRight: "5px" }}>
+            {minutes < 10 ? '0' + minutes : minutes}
+          </div>
+          
+          <div className="digit" style={{backgroundColor: "#285257"}}>
+            {ampm}
+          </div>
         </div>
       </div>
+        
     );
   }
 }
-
 export default Clock;
